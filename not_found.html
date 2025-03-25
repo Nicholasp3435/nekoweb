@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/resources/default_styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            border: unset;
+            color: #fff;
+        }
+        a {
+            text-decoration: underline 3px;
+        }
+        pre {
+            cursor: pointer;
+        }
+        pre:hover {
+            text-shadow: 0 0 1em;
+        }
+        @media only screen and (max-width: 900px) {
+            pre {
+                font-size: 1.75vw;
+                line-height: 1.75vw;
+            }
+        }   
+    </style>
+    <title>404</title>
+</head>
+<body>
+    <h1>404</h1>
+    <p>Couldn't find <script>document.write(`"${document.URL}"`);</script><noscript>the requested page</noscript></p>
+    <pre role="img" aria-label="ASCII Art of cat on a labtop" id="typing"></pre>
+    <script>
+        const typing_pre = document.querySelector('#typing');
+        const frame1 =  
+`
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠟⠹⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⢁⡀⠀⢹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡿⠃⢰⡿⣿⠀⠈⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⣷⣦⣿⣧⣹⡆⠀⣿⠀⢻⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣟⠛⠛⠿⢶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⢹⣇⠀⠈⠉⠛⠷⣿⡀⠀⣿⡀⣀⣤⣴⠶⠶⠶⠶⠶⢶⣤⡀⠀⠈⣿⡄⠀⠀⠀⠈⠙⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣦⠛⠃⣀⡈⢿⣦⣀⠀⠀⠀⠈⠁⠀⠈⠙⠋⠁⠀⠀⢀⣀⣀⠀⠀⣼⠇⣀⣀⣻⡇⠀⠀⠀⠀⠀⠀⠈⢿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠻⢷⣾⠿⣿⡆⠉⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡶⠟⣿⡟⠀⣸⡟⠀⢹⡟⢿⡇⠀⠀⠀⠀⠀⠀⠀⠘⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⢀⣿⠏⠀⠈⠁⠀⠀⠀⣀⣤⣤⣄⡀⠀⠀⠀⠀⢿⣦⣼⡟⠀⣴⡿⠁⠀⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣶⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣯⡍⠀⣿⣧⠀⠀⠀⠀⠛⠋⠉⠻⣷⡄⠀⠀⠀⠀⠉⠉⢀⣼⠟⠁⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣀⣠⣤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢹⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣏⣿⠁⠀⠛⠃⠀⠀⠀⢰⣿⣷⠀⠀⢻⡇⠀⠀⠀⢰⣦⣴⡿⠋⠀⢠⣄⢸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡿⠛⠋⠉⠁⠈⠉⢹⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢿⣆⠙⢿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⢿⣆⠸⣿⡆⠀⠀⠀⠸⠿⠏⠀⠀⢸⡇⠀⠀⠀⠀⠹⣿⣄⠀⠀⣸⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⠀⠀⠀⠀⠀⣠⣾⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⣿⡄⠀⠙⢿⣷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢷⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣴⠿⠃⠀⣰⣿⠁⠀⠀⢀⣀⢀⣀⣀⣤⣴⡿⢻⣿⠀⠀⠀⠀⠀⣿⣇⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢹⣧⠀⠀⠀⠙⢿⣿⣦⡀⠀⠀⠀⠀⢀⣤⣶⠶⠶⠶⣶⣤⣄⣉⣽⣿⡷⠶⠶⢶⣦⡀⠀⠀⠀⣿⠏⠙⠛⠻⠿⠷⠿⠟⠃⠀⠀⠀⠘⠛⠻⠿⠿⣯⣽⣿⣿⣿⠀⠀⠀⠀⠀⠘⢿⡍⠉⠀⠀⠉⠛⠷⣦⣀⠀⠀⠀
+⠀⠀⠀⠀⢿⡄⠀⠀⠀⠈⠙⣿⣿⡀⠀⠀⢰⡿⣫⡄⠀⣴⡆⠀⠈⠙⠛⠋⣿⣿⣿⡟⠛⠛⢻⣦⣀⠸⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠀⠀⢀⡀⠈⣿⠃⠀⠀
+⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⢹⣿⣧⠀⠀⠸⣧⣹⣇⡀⣹⣷⣴⡶⣀⣀⢀⣙⠛⠛⠁⢀⣾⠇⠙⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣧⣤⣤⣤⣘⣛⣿⠟⠀⠀⠀
+⠀⠀⠀⠀⠀⢹⣇⠀⠀⠀⠀⠀⢿⣿⣄⣀⣀⣉⣛⣛⣻⣿⣻⣿⡿⠛⠛⠻⠿⠷⣶⣦⣾⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⠈⠙⠻⠿⠟⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠻⣷⡄⠀⠀⠀⠘⣿⣿⠛⠛⠛⠛⢿⣭⣿⠟⣡⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣈⢻⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡄⠀⠀⢸⣿⣧⠀⠀⠀⢸⣿⠁⢠⣿⠁⢠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⠛⠷⠶⠶⠶⠶⠶⠶⠶⠞⠛⠛⠉⠉⠙⠛⠛⠛⠛⠓⠒⠒⠛⠛⠷⣶⣴⡿⠙⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣧⡀⠀⢿⣿⣇⠀⠀⠀⠻⠿⠟⠛⢿⣾⣶⣤⣤⣶⣀⣀⣀⠀⠀⠀⠀⣀⡘⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡈⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣙⣿⣮⡍⠉⠉⠙⠿⣿⣟⢻⣆⣿⠛⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣾⣿⣿⡟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+`
+
+const frame2 = 
+`
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠟⠹⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⢁⡀⠀⢹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡿⠃⢰⡿⣿⠀⠈⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⣷⣦⣿⣧⣹⡆⠀⣿⠀⢻⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣟⠛⠛⠿⢶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⢹⣇⠀⠈⠉⠛⠷⣿⡀⠀⣿⡀⣀⣤⣴⠶⠶⠶⠶⠶⢶⣤⡀⠀⠈⣿⡄⠀⠀⠀⠈⠙⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣦⠛⠃⣀⡈⢿⣦⣀⠀⠀⠀⠈⠁⠀⠈⠙⠋⠁⠀⠀⢀⣀⣀⠀⠀⣼⠇⣀⣀⣻⡇⠀⠀⠀⠀⠀⠀⠈⢿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠻⢷⣾⠿⣿⡆⠉⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡶⠟⣿⡟⠀⣸⡟⠀⢹⡟⢿⡇⠀⠀⠀⠀⠀⠀⠀⠘⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⢀⣿⠏⠀⠈⠁⠀⠀⠀⣀⣤⣤⣄⡀⠀⠀⠀⠀⢿⣦⣼⡟⠀⣴⡿⠁⠀⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣶⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣯⡍⠀⣿⣧⠀⠀⠀⠀⠛⠋⠉⠻⣷⡄⠀⠀⠀⠀⠉⠉⢀⣼⠟⠁⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣀⣠⣤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢹⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣏⣿⠁⠀⠛⠃⠀⠀⠀⢰⣿⣷⠀⠀⢻⡇⠀⠀⠀⢰⣦⣴⡿⠋⠀⢠⣄⢸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡿⠛⠋⠉⠁⠈⠉⢹⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢿⣆⠙⢿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⢿⣆⠸⣿⡆⠀⠀⠀⠸⠿⠏⠀⠀⢸⡇⠀⠀⠀⠀⠹⣿⣄⠀⠀⣸⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⠀⠀⠀⠀⠀⣠⣾⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⣿⡄⠀⠙⢿⣷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢷⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣴⠿⠃⠀⣰⣿⠁⠀⠀⢀⣀⢀⣀⣀⣤⣴⡿⢻⣿⠀⠀⠀⠀⠀⣿⣇⣀⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢹⣧⠀⠀⠀⠙⢿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢹⣿⣷⣶⡶⢶⣦⡀⠀⠀⠀⣿⠏⠙⠛⠻⠿⠷⠿⠟⠃⠀⠀⠀⠘⠛⠻⠿⠿⣯⣽⣿⣿⣿⠀⠀⠀⠀⠀⠘⢿⡍⠉⠀⠀⠉⠛⠷⣦⣀⠀⠀⠀
+⠀⠀⠀⠀⢿⡄⠀⠀⠀⠈⠙⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡿⠛⠛⠛⠻⢿⣽⣻⣦⣀⠸⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠀⠀⢀⡀⠈⣿⠃⠀⠀
+⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⢹⣿⣧⠀⢀⣠⣴⡶⠟⠛⠛⠷⢶⣶⣾⣿⢱⡟⠀⠀⣤⠀⠙⢿⣟⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣧⣤⣤⣤⣘⣛⣿⠟⠀⠀⠀
+⠀⠀⠀⠀⠀⢹⣇⠀⠀⠀⠀⠀⢿⣿⣄⣼⣏⣥⠀⠀⠀⠀⠀⠀⠀⠀⠿⢿⣧⣄⣰⣟⣀⡀⠀⠙⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⠈⠙⠻⠿⠟⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠻⣷⡄⠀⠀⠀⠘⣿⣿⢿⣿⣧⡾⠟⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣏⠉⠉⠁⠀⠀⠈⠉⠀⢰⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣈⢻⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡄⠀⠀⢸⣿⣧⠉⠻⣧⣀⣀⣤⣴⣶⣶⣶⣶⣤⣶⡿⠿⣧⡀⠀⠀⠀⠀⠀⠀⣾⠛⠷⠶⠶⠶⠶⠶⠶⠶⠞⠛⠛⠉⠉⠙⠛⠛⠛⠛⠓⠒⠒⠛⠛⠷⣶⣴⡿⠙⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣧⡀⠀⢿⣿⣇⠀⠈⠛⠛⠉⠈⠛⢿⣿⡿⠿⠿⠻⣷⣜⣿⣦⣀⠀⠀⢀⡀⢿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡈⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣙⣿⣦⡄⠀⠈⠙⠿⣿⣝⣷⡄⣼⠟⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣾⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+`
+
+        const audio_data = "data:audio/mp3;base64,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4GAmqqpUKArszHGFNqqlVVeMzbM2qqtCgK7MzQMBMaqq1QFeMzRgJjqquqqUZm2ZjqquqqUZm2ZjqquFARJbM2GAhR1VXUBVdmbYCZ4KnTv+v/XpkUxBTUUzLjEwMFVV//uSxPYAK9IvC1ncgAIKMpkPnjAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==";
+
+        const funny_song = new Audio("https://cat-boop.com/cdn/for_neocities/Scatmans_meow.mp3");
+        funny_song.loop = true;
+
+        const funny_header = "you did it";
+
+        typing_pre.textContent = frame1;
+
+        let counter = 0;
+        let typing = setInterval(() => {
+            if (counter % 2 == 0) {
+                typing_pre.textContent = frame2;
+                counter = 0;
+            } else {
+                typing_pre.textContent = frame1;
+            }
+            counter++;
+        }, 256);
+
+        const h1 = document.querySelector('h1');
+        let num_clicked = 0;
+        let funny_happened = false;
+        let final_funny_happened = false;
+
+        new Audio(audio_data).play();
+        typing_pre.addEventListener('click', () => {
+            new Audio(audio_data).play();
+
+            num_clicked++;
+
+            if (num_clicked == 404) {
+                funny_happened = true;
+                do_something_funny();
+            } 
+
+            let display = funny_happened? "you did it" : 404 - num_clicked;
+
+            display = display == 69 ? "nice" : display;
+
+            h1.textContent = display;
+            document.title = display;
+
+            final_funny_happened ? document.querySelector('#count').textContent = num_clicked : null;
+        });
+
+
+        function do_something_funny() {
+            document.body.classList.add("funny");
+
+            funny_song.play();
+
+            setTimeout(() => {
+                document.querySelector('p').innerHTML = 
+                "I hope you can find what you are looking for. As they say, it's about the journey, not the destination.<br><br>Getting lost is just a part of the journey.<br><br>It's ok to be lost <3";
+            }, 40000);
+
+            setTimeout(() => {
+                document.querySelector('p').innerHTML = 
+                "Still here? Maybe the journey was the destination all along";
+            }, 108374);
+
+            setTimeout(() => {
+                final_funny_happened = true;
+                document.querySelector('p').innerHTML = 
+                `I mean if you like clicking cats, (you've clicked 404 kitty <span id='count'>${num_clicked}</span> times) check out my first ever website lol.<br>maybe this is really your destination<br><a href='https://cat-boop.com' target="_blank" rel="noopener noreferrer">cat-boop.com</a>`;
+            }, 176748);
+        }
+    </script>
+    <p class="ascii"><a href="/">go home</a></p>
+</body>
+</html>

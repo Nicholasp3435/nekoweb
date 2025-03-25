@@ -1,0 +1,112 @@
+div.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+    justify-content: center;
+}
+
+div.button-container img {
+    height: 31px;
+    width: 88px;
+}
+
+
+iframe {
+    height: 70em;
+    border: none;
+    margin: 0.5em;
+    width:100%;
+}
+
+.ascii-flag {
+    margin: 1em;
+}
+
+main {
+    position: relative;
+    min-width: 40em;
+}
+
+#guestbook-btn {
+    background-color: #202;
+    position: absolute;
+    right: 0;
+    top: 10em;
+    font-size: 1.1em;
+    border: double #fff 0.5rem;
+    border-right: 0;
+    writing-mode: vertical-rl;
+    padding: 0.5em;
+    box-shadow: var(--std-shadow), inset var(--std-shadow);
+}
+
+#guestbook-btn::after {
+    content: " ◄";
+}
+
+#guestbook-btn.close::after {
+    content: " ►";
+}
+
+#guestbook {
+    flex: 40;
+    min-width: 21em;
+} 
+
+#guestbook.hidden {
+    display: none;
+}
+
+#guestbook h2 {
+    text-align: center;
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+}
+
+#intro > div {
+    flex: 5;
+}
+
+#profile {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-image: url("/resources/imgs/stars.gif");
+    float: left;
+    margin: 16px;
+    box-shadow: var(--std-shadow);
+    image-rendering: optimizeQuality;
+}
+
+#profile div {
+    border: solid #fff 4px;
+    overflow: hidden;
+}
+
+#profile img {
+    animation: float 7s ease infinite;
+    transform: translateY(4px);
+    position: relative;
+    width: 100%;
+    filter: drop-shadow(0 0 2em hsla(273, 86%, 40%, 50%));
+}
+
+@keyframes float {
+    50% {transform: translateY(10px);}
+}
+
+#profile figcaption {
+    border: solid #fff 2px;
+    background-color: #212;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #intro {
+        flex-direction: column;
+    }
+}
+

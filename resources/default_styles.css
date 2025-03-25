@@ -1,0 +1,454 @@
+@font-face {
+    /**    
+     * https://int10h.org/oldschool-pc-fonts/ 
+     *
+     * modified by Nichao 02/25 and added the ꜵ and Ꜵ chars
+     */
+    font-family: 'BIOS';
+    src: url('/resources/fonts/AcPlus_IBM_BIOS_ao.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /**
+        Font Author: ?
+
+        More Info:
+
+        https://web.archive.org/web/20120819044459/http://www.roysac.com/thedrawfonts-tdf.asp
+
+        FIGFont created with: http://patorjk.com/figlet-editor
+
+        Modified by Nichao 02/25 to be ported into a true type font.
+     */
+    font-family: 'ANSI_Regular';
+    src: url('/resources/fonts/ANSI_Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /**
+        Font Author: ?
+
+        More Info:
+
+        https://web.archive.org/web/20120819044459/http://www.roysac.com/thedrawfonts-tdf.asp
+
+        FIGFont created with: http://patorjk.com/figlet-editor
+
+        Modified by Nichao 02/25 to be ported into a true type font.
+     */
+    font-family: 'ANSI_Shadow';
+    src: url('/resources/fonts/ANSI_Shadow.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /**
+        Small by Glenn Chappell 4/93 -- based on Standard
+        Includes ISO Latin-1
+        figlet release 2.1 -- 12 Aug 1994
+        Permission is hereby given to modify this font, as long as the
+        modifier's name is placed on a comment line.
+
+        Modified by Paul Burton <solution@earthlink.net> 12/96 to include new parameter
+        supported by FIGlet and FIGWin.  May also be slightly modified for better use
+        of new full-width/kern/smush alternatives, but default output is NOT changed.
+
+        Modified by Nichao 02/25 to be ported into a true type font.
+     */
+    font-family: 'Ascii_Small';
+    src: url('/resources/fonts/ascii.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --flicker-speed: 0.15s;
+    --flicker-content: '';
+    --std-shadow: 0 0 .5em;
+}
+
+body {
+    margin: 1px;
+    image-rendering: pixelated;
+    font-family: 'BIOS', 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: var(--std-shadow);
+    background-color: #101;
+}
+
+header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    border-image: url(/resources/imgs/border.png) 115 119 / 3em 3em / 0 round;
+    text-shadow: none;
+    filter: drop-shadow(0 0 0.25em #f4f);
+}
+
+header pre {
+    font-size: 1em;
+    line-height: 1em;
+}
+
+h1 {
+    font-weight: 100;
+    color: #f4f;
+    font-family: 'ANSI_Shadow';
+    font-size: 8em;
+    text-align: center;
+    margin: 0;
+    padding: .25em;
+}
+
+h2, h3 {
+    text-decoration: underline;
+    line-height: 1.33em;
+    color: #fff;
+}
+
+button {
+    font-family: inherit;
+    text-shadow: inherit;
+    color: inherit;
+}
+
+.ascii {
+    font-family: 'Ascii_Small';
+    font-size: 6em;
+    line-height: 1em;
+}
+
+h2.ascii, h3.ascii {
+    margin: 0;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content > * {
+    box-sizing: border-box;
+    border: double white 0.5em;
+    box-shadow: var(--std-shadow), inset var(--std-shadow);
+    padding: 1em;
+}
+
+main {
+    flex: 83;
+}
+
+#side {
+    flex: 17;
+    position: relative;
+}
+
+hr {
+    width: 100%;
+    border-top: solid #fff 2px;
+    box-shadow: var(--std-shadow), inset var(--std-shadow);
+}
+
+p {
+    margin: 1em;
+}
+
+img {
+    filter: drop-shadow(0 0 0.25em);
+}
+
+a {
+    padding: 1px;
+}
+
+a:any-link {
+    color: #3b8;
+}
+
+a:hover, a:focus {
+    color: #ed1;
+}
+
+a:focus {
+    border: dashed 1px #cd1;
+}
+
+a.current {
+    color: #f4f;
+    text-decoration: underline;
+}
+
+li {
+    margin: 0.5em;
+}
+
+ul {
+    list-style-type: "► ";
+}
+
+ul ul {
+    list-style-type: "└► ";
+}
+ul ul ul {
+    list-style-type: " └► ";
+}
+
+pre {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+    text-shadow: inherit;
+    font-family: inherit;
+}
+
+img.favicon {
+    position: relative;
+    bottom: -.25em;
+    height: 1em;
+    scale: 1.5;
+    margin-left: 0.5em;
+}
+
+
+#sun-moon-phase {
+    text-align: center;
+}
+
+#sun-moon-phase img {
+    width: 75%;
+    margin: 1em;
+    border: double white .333em;
+}
+
+/* crt effect */
+
+:root::before {
+    content: var(--flicker-content);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 8;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+:root::after {
+    content: var(--flicker-content);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.25);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker var(--flicker-speed) infinite;
+}
+
+#toggle-crt {
+    background-color: #212;
+    font-size: 1em;
+    padding: .25em;
+    margin: 1em;
+    width: 10em;
+    cursor: pointer;
+}
+
+#skip-to-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .25em;
+    font-size: 1.25em;
+    z-index: 99;
+    transform: scale(0);
+}
+    
+#skip-to-content:focus, #skip-to-content:focus-within {
+    transform: scale(1);
+}
+
+@keyframes flicker {
+    00% { opacity: 0.27861; }
+    05% { opacity: 0.34769; }
+    10% { opacity: 0.23604; }
+    15% { opacity: 0.10626; }
+    20% { opacity: 0.18128; }
+    25% { opacity: 0.10626; }
+    30% { opacity: 0.18128; }
+    35% { opacity: 0.23604; }
+}
+  
+/* bring clippy down here for crt effect */
+.clippy, .clippy-balloon {
+    z-index: 0;
+    filter: drop-shadow(0 0 0.25em);
+}
+
+/* end crt effects */
+
+@media (prefers-reduced-motion) {
+    :root {
+        --text-animation-speed: 3s;
+        --flicker-speed: 0s;
+    }
+    * {
+        text-shadow: none;
+    }
+    
+    :root::before {
+        display: none;
+    }
+    :root::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 4em;
+    }
+    .ascii {
+        font-size: 4em;
+    }
+    header pre {
+        visibility: collapse;
+    }
+    
+}
+
+/* https://codepen.io/zachkrall/pen/MWWGMPx 
+*  modified by me
+*/
+
+:root {
+    --text-animation-speed: 1.25s;
+}
+
+.rainbow {
+    animation-name: rainbow;
+    animation-duration: var(--text-animation-speed);
+    animation-iteration-count: infinite;
+}
+@keyframes rainbow {
+    00%  {color: #ff668e;}
+    17%  {color: #c29500;}
+    33%  {color: #54b000;}
+    50%  {color: #00aea1;}
+    67%  {color: #00a4ec;}
+    83%  {color: #ea5fff;}
+    100% {color: #ff668e;}
+}
+
+.trans {
+    animation-name: trans;
+    animation-duration: var(--text-animation-speed);
+    animation-iteration-count: infinite;
+}
+@keyframes trans {
+    00%  {color: #5bcffa;}
+    25%  {color: #f5abb9;}
+    40%  {color: #ffffff;}
+    80%  {color: #f5abb9;}
+    100% {color: #5bcffa;}
+}
+  
+/* transverse waves; up and down */
+.wavy-t {
+    position: relative;
+    top: 3.5px;
+    left: 0;
+    animation-name: wavy-t;
+    animation-duration: var(--text-animation-speed);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes wavy-t {
+    50% {top: -7px;}
+}
+
+/* longitudinal waves; left and right */
+.wavy-l {
+    position: relative;
+    top: 0;
+    left: 3.5px;
+    animation-name: wavy-l;
+    animation-duration: var(--text-animation-speed);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes wavy-l {
+    50% {left: -7px;}
+}
+
+/* surface waves; around a cirle */
+.wavy-s {
+    position: relative;
+    top: 0;
+    left: 0;
+    animation-name: wavy-s;
+    animation-duration: var(--text-animation-speed);
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    --radius-px: 7px;
+}
+/* top: radius * sin(% of turn); left: radius * cos(% of turn)
+ff 59 doesn't support sin() and cos() css */
+@keyframes wavy-s {
+    00%  {top: calc(var(--radius-px) * 0.00); left: calc(var(--radius-px) * 1.00)}
+    05%  {top: calc(var(--radius-px) * 0.31); left: calc(var(--radius-px) * 0.95)}
+    10%  {top: calc(var(--radius-px) * 0.59); left: calc(var(--radius-px) * 0.81)}
+    15%  {top: calc(var(--radius-px) * 0.81); left: calc(var(--radius-px) * 0.59)}
+    20%  {top: calc(var(--radius-px) * 0.95); left: calc(var(--radius-px) * 0.31)}
+    25%  {top: calc(var(--radius-px) * 1.00); left: calc(var(--radius-px) * 0.00)}
+    30%  {top: calc(var(--radius-px) * 0.95); left: calc(var(--radius-px) * -.31)}
+    35%  {top: calc(var(--radius-px) * 0.81); left: calc(var(--radius-px) * -.59)}
+    40%  {top: calc(var(--radius-px) * 0.59); left: calc(var(--radius-px) * -.81)}
+    45%  {top: calc(var(--radius-px) * 0.31); left: calc(var(--radius-px) * -.95)}
+    50%  {top: calc(var(--radius-px) * 0.00); left: calc(var(--radius-px) * -1.0)}
+    55%  {top: calc(var(--radius-px) * -.31); left: calc(var(--radius-px) * -.95)}
+    60%  {top: calc(var(--radius-px) * -.59); left: calc(var(--radius-px) * -.81)}
+    65%  {top: calc(var(--radius-px) * -.81); left: calc(var(--radius-px) * -.59)}
+    70%  {top: calc(var(--radius-px) * -.95); left: calc(var(--radius-px) * -.31)}
+    75%  {top: calc(var(--radius-px) * -1.0); left: calc(var(--radius-px) * 0.00)}
+    80%  {top: calc(var(--radius-px) * -.95); left: calc(var(--radius-px) * 0.31)}
+    85%  {top: calc(var(--radius-px) * -.81); left: calc(var(--radius-px) * 0.59)}
+    90%  {top: calc(var(--radius-px) * -.59); left: calc(var(--radius-px) * 0.81)}
+    95%  {top: calc(var(--radius-px) * -.31); left: calc(var(--radius-px) * 0.95)}
+    100% {top: calc(var(--radius-px) * 0.00); left: calc(var(--radius-px) * 1.00)}
+}
+
+/* https://en.wikipedia.org/wiki/Marquee_element */
+.marquee-container {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: marquee 10s linear infinite;
+}
+.marquee-content {
+    display: inline-block;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

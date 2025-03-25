@@ -1,0 +1,134 @@
+:root {
+    --figure-size: 280px;
+}
+
+.collapsed {
+    display: none;
+}
+
+.collapsible {
+    background-color: #202;
+    border: double #808 0.5em;
+
+}
+.collapse-btn {
+    background-color: #202;
+    border: double #808 0.5rem;
+    border-bottom: none;
+    position: relative;
+    top: 0.4em;
+    border-bottom: solid #808 2px;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 1em 0.25em;
+}
+
+.collapse-btn.active, .collapse-btn.active:hover {
+    background-color: #606;
+    border-bottom: none;
+}
+
+.collapse-btn:focus {
+    background-color: #404;
+
+}
+
+.collapse-btn:hover {
+    background-color: #404;
+}
+
+.btn-container {
+    display: flex;
+    gap: 0.25em;
+}
+
+div.pic-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--figure-size));
+    gap: 1em;
+    margin: 1em;
+
+}
+
+div.pic-container img {
+    width: var(--figure-size);
+    filter: drop-shadow(0 0 0 #0000);
+    border: solid 1px #fff;
+    border-collapse: collapse;
+    image-rendering: optimizeQuality;
+}
+
+div.pic-container iframe {
+    width: var(--figure-size);
+    height: var(--figure-size);
+    filter: drop-shadow(0 0 0 #0000);
+    border: solid 1px #fff;
+    border-collapse: collapse;
+}
+
+figure {
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    box-shadow: var(--std-shadow);
+    height: calc(var(--figure-size) * (1.5));
+}
+
+figcaption {
+    border-collapse: collapse;
+    border: solid 1px #fff;
+    background-color: #212;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hidden {
+    position: absolute;
+    visibility: hidden;
+    max-height: 0;
+}
+
+form {
+    padding-left: 1em;
+}
+
+video {
+    width: var(--figure-size);
+}
+
+footer {
+    padding: 1em;
+    border: double #fff 0.5em;
+    box-shadow: inset var(--std-shadow), var(--std-shadow);
+}
+
+#CC {
+    padding-left: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+
+    :root {
+        --figure-size: 250px
+    }
+
+    #btn-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .collapse-btn {
+        border: double #808 0.5rem;
+
+    }
+
+    .collapse-btn.active, .collapse-btn.active:hover {
+        border: double #808 0.5rem;
+    }
+}

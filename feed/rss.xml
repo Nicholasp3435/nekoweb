@@ -1,0 +1,18 @@
+<rss version="2.0">
+	<channel>
+		<title>Nichao's Epic RSS Feed</title>
+		<link>https://nichao.nekoweb.org/</link>
+		<item>
+			<title>Piedmont NWR Birding</title>
+			<description>
+                Today I went birding with my uni's birding club to Piedmont National Wildlife
+                Refuge! We were aiming to see some of the rare Red-cockaded Woodpeckers, and we
+                can happily say that we found three of them! The pictures I got are not the best,
+                but I think they're at least okay.
+            </description>
+			<link>https://nichao.nekoweb.org/photo_gallery/earth#latest</link>
+			<guid>post-1</guid>
+			<pubDate>Sun, 23 Mar 2025, 20:00:00 -0500</pubDate>
+		</item>
+	</channel>
+</rss>

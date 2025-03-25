@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding things</title>
+
+    <link rel="stylesheet" type="text/css" href="/resources/default_styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="/resources/noscript.css">
+    </noscript>
+    
+    <script defer src="/resources/main.js"></script>
+
+    <script defer src="3d.js"></script>
+    <script src="/resources/gl-matrix/gl-matrix-min.js"></script>
+</head>
+<body>
+    <!-- for neko :3 -->
+    <script src="/resources/oneko/oneko.js"></script>
+
+    <header>
+        <h1>3D rendering</h1>
+    </header>
+
+    <div id="content">
+        <main id='main'>
+            <noscript>
+                <a href="/sitemap/">sitemap</a>
+            </noscript>
+            
+            <h2 class="fancy ascii rainbow">3D Renderer</h2>
+            <p>I'm using a library called <a href="https://glmatrix.net/" class="include-icon" target="_blank" rel="noopener noreferrer">glMatrix</a> and doing linear algebra to draw models. All my other time's I've 3d rendered things, I've done the linear algebra myself, but glMatrix is actually optimzed for it!</p>
+            <p>I know three.js exists that can properly render things for me, but I wanted to see if I could render things myself with my own code</p>
+            <label for="obj-input">Upload a .obj file:</label>
+            <input id="obj-input" type="file" accept="model/obj">
+            <br><br>
+            <p>View as a:</p>
+            <input type="radio" id="wire" name="view" value="wireframe" checked>
+            <label for="wire">Wireframe</label>
+            <br>
+            <input type="radio" id="solid" name="view" value="solid">
+            <label for="solid">Solid</label>
+            <br>
+            <input type="radio" id="shaded" name="view" value="shaded">
+            <label for="shaded">Shaded</label><br>
+            <small>shaded is still a work in prograss</small>
+            <br>
+            
+            <canvas id="render" width="512" height="512"></canvas>
+    
+    
+        </main>
+
+    </div>
+
+
+
+</body>
+</html>
