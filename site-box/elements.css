@@ -1,0 +1,81 @@
+/* 
+    Don't use this file to edit your site style! Create a different CSS file for that.
+    This file defines how custom elements (like sitebox) will look like.
+    Setting CSS that breaks main nekoweb site on purpose is prohibited and may result in ban and site deletion! 
+*/
+
+/* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://lune.dimden.dev/405a44b7e5.png */
+
+.site-box {
+    display: flex;
+    transition: 0.5s;
+    scale: .9;
+}
+
+.site-box:hover {
+    scale: 1;
+}
+
+.site-box span.top-dot::before {
+    content: url('/site-box/bi.gif');
+    position: absolute;
+    top: 7em;
+    right: 3em;
+    z-index: 2;
+}
+
+.site-box::before {
+    position: absolute;
+    content: url('/site-box/static.png');
+    z-index: 1;
+    background-color: #000;
+}
+
+.site-box:hover::before {
+    content: url('/site-box/hover.png');
+}
+
+
+.site-box:hover span.top-dot::before {
+    content: '';
+}
+
+.site-box::after {
+    position: absolute;
+    content: url('/site-box/border.png');
+    z-index: 2;
+}
+
+.site-box p {
+    color: #f0f;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    z-index: 2;
+    margin-left: 2em;
+}
+
+.site-box a > span {
+    visibility: hidden;
+}
+
+
+/* Style for your 'Follow on Nekoweb' button (<iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="28"></iframe>) */
+.follow {
+}
+
+/* Style for your post box (must start with ".post-box") */
+.post-box {
+    background-color: #404; 
+    border: .5em double #d0d;
+    padding: 15px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.post-box .post-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+
