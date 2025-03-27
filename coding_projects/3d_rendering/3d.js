@@ -174,14 +174,14 @@ class Model {
     perspectiveDivide(vector) {
         glMatrix.vec4.transformMat4(vector, vector, this.perspectiveMat);
         
-        let pers = glMatrix.vec4.fromValues(
+        let perspective = glMatrix.vec4.fromValues(
             vector[0] / vector[3],
             vector[1] / vector[3],
             vector[2] / vector[3],
             1
         );
     
-        return pers;
+        return perspective;
     }
 
     transformVectors() {
@@ -379,7 +379,11 @@ function parse_vertices_faces([vertices, faces, normals]) {
             glMatrix.vec3.subtract(ac, parsed_vertices[parsed_face.vectors[2]], parsed_vertices[parsed_face.vectors[0]]);
 
             let normal = glMatrix.vec3.create();
-            glMatrix.vec3.cross(normal, ab, ac);
+            if (document.querySelector('#flip').checked) {
+                glMatrix.vec3.cross(normal, ac, ab);
+            } else {
+                glMatrix.vec3.cross(normal, ab, ac);
+            }
 
             parsed_face.normal = glMatrix.vec4.fromValues(
                 normal[0],
