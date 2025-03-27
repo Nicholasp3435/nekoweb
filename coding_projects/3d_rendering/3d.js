@@ -445,13 +445,12 @@ function get_model_from_input() {
 const mainScene = new Scene(document.querySelector('canvas'));
 const file_input = document.getElementById("obj-input");
 const view_btns = document.querySelectorAll('input[name="view"]');
+document.querySelectorAll('#flip'),addEventListener('change', () => {
+    get_model_from_input();
+
+})
 
 let view = document.querySelector('input[name="view"]:checked').value;
-view_btns.forEach(btn => {
-    btn.addEventListener('change', (event) => {
-        view = document.querySelector('input[name="view"]:checked').value
-    })
-})
 
 file_input.addEventListener("change", get_model_from_input);
 
