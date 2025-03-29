@@ -174,14 +174,14 @@ class Model {
     perspectiveDivide(vector) {
         glMatrix.vec4.transformMat4(vector, vector, this.perspectiveMat);
         
-        let perspective = glMatrix.vec4.fromValues(
+        let pers = glMatrix.vec4.fromValues(
             vector[0] / vector[3],
             vector[1] / vector[3],
             vector[2] / vector[3],
             1
         );
     
-        return perspective;
+        return pers;
     }
 
     transformVectors() {
@@ -247,6 +247,18 @@ class Model {
             scene.ctx.fill();   
         }
     }
+
+    flipNormals() {
+        this.faces.forEach(face => {
+            face.normal = glMatrix.vec4.fromValues(
+                -face.normal[0],
+                -face.normal[1],
+                -face.normal[2],
+                -1
+            )
+        })
+    }
+    
 
     draw(scene) {
         scene.ctx.strokeStyle = this.strokeStyle;
@@ -379,11 +391,7 @@ function parse_vertices_faces([vertices, faces, normals]) {
             glMatrix.vec3.subtract(ac, parsed_vertices[parsed_face.vectors[2]], parsed_vertices[parsed_face.vectors[0]]);
 
             let normal = glMatrix.vec3.create();
-            if (document.querySelector('#flip').checked) {
-                glMatrix.vec3.cross(normal, ac, ab);
-            } else {
-                glMatrix.vec3.cross(normal, ab, ac);
-            }
+            glMatrix.vec3.cross(normal, ab, ac);
 
             parsed_face.normal = glMatrix.vec4.fromValues(
                 normal[0],
@@ -445,12 +453,13 @@ function get_model_from_input() {
 const mainScene = new Scene(document.querySelector('canvas'));
 const file_input = document.getElementById("obj-input");
 const view_btns = document.querySelectorAll('input[name="view"]');
-document.querySelectorAll('#flip'),addEventListener('change', () => {
-    get_model_from_input();
-
-})
 
 let view = document.querySelector('input[name="view"]:checked').value;
+view_btns.forEach(btn => {
+    btn.addEventListener('change', (event) => {
+        view = document.querySelector('input[name="view"]:checked').value
+    })
+})
 
 file_input.addEventListener("change", get_model_from_input);
 
@@ -460,6 +469,7 @@ async function init_scene() {
 
     mainScene.addModel(eevee);
     eevee.setRotation(0, 180, 0);
+    // eevee.flipNormals()
 
     mainScene.setLight(1, 0, -1);
 
@@ -472,6 +482,7 @@ function drawLoop() {
     mainScene.models.forEach(model => {
         model.addRotation(0, .33, 0);
         model.drawMode = view;
+        
     })
 
     requestAnimationFrame(drawLoop);
