@@ -13,3 +13,7 @@ table.function th, table.function td {
 table.function th {
     border-width: 2px;
 }
+
+.MJX-TEX {
+    font-size: 1.25em;
+}
