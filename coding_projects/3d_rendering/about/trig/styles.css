@@ -1,0 +1,15 @@
+table.function {
+    width: 25%;
+    margin: auto;
+}
+
+table.function th, table.function td {
+    border: solid white 1px;
+    padding: 0;
+    text-align: center;
+    padding: 3px
+}
+
+table.function th {
+    border-width: 2px;
+}

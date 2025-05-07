@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="nic's epic website :3">
+    <meta content="#af6cd6" name="theme-color">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nic's epic website :3</title>
+
+    <link rel="stylesheet" type="text/css" href="/resources/default_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="/resources/noscript.css">
+    </noscript>
+
+    <script defer src="/resources/main.js"></script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <!-- for neko :3 -->
+    <script src="/resources/oneko/oneko.js"></script>
+
+    <header>
+        <h1>About 3D Rendering</h1>
+    </header>
+
+    <div id="content">
+        <main>
+
+            <noscript>
+                <a href="sitemap">sitemap</a>
+            </noscript>
+
+            <h2 class="ascii fancy rainbow">Trigonometry</h2>
+            <p>Trigonometry (trig) is the math dealing with triangles, but as you'll soon see, it relates really closely to rotations.</p>
+            <p>There are two basic trig functions, \( \text{sine} \) and \( \text{cosine} \).</p>
+            <p>You may be familiar with functions like $$f(x) = 3 \cdot x+1$$ or they may be written as $$y=3\cdot x+1$$</p>
+            <p>These both represent the same thing, a simple line. \( f(x) \) represents being able to "plug" in a value of \( x \) into \( 3\cdot x + 1\). For example, $$f(6) = 3\cdot 6 + 1 = 17$$</p>
+            <p>These can be written into a table so we can easily see what different values \( f(x) \) can be:</p>
+            <table class="function">
+                <tr>
+                    <th>\( x \)</th>
+                    <th>\(f(x) = 3\cdot x+1\)</th>
+                </tr>
+                <tr>
+                    <td>\(0\)</td>
+                    <td>\(3\cdot 0+1=1\)</td>
+                </tr>
+                <tr>
+                    <td>\(1\)</td>
+                    <td>\(3\cdot 1+1=4\)</td>
+                </tr>
+                <tr>
+                    <td>\(2\)</td>
+                    <td>\(3\cdot 2+1=7\)</td>
+                </tr>
+                <tr>
+                    <td>\(3\)</td>
+                    <td>\(3\cdot 3+1=10\)</td>
+                </tr>
+            </table>
+            <p>Now, \( \text{sine} \) and \( \text{cosine} \) are also just some functions, except a little more complicated. Instead of doing some simple arithmetic on some number, \( \text{sine} \) and \( \text{cosine} \) take an angle as an input, and output a ratio between two sides of a triangle. Let's look at \( \text {sine} \) first.</p>
+
+            <h4>Sine</h4>
+            <p>\( \text{sine} \) (often abbreviated as \( \sin \)) takes an angle as an input. This angle is typically given this symbol: \( \theta \) called theta.</p>
+            <p>It is probably easiest to view an example of what \( \sin \) outputs. Let's say we input \( 30^{\circ}\) into \( \sin \). This is represented as \( \sin(30^{\circ}) \) </p>
+            <p>What \( \sin(30^{\circ}) \) outputs, therefore, is the ratio between two sides of a triangle, but which two sides and what triangle?</p>
+            <p>Imagine that you and a friend are standing at some point on a road. There is an intersection coming up. You want to stay on the road but your friend wants to cut the corner by turning 30 degrees from the road.</p>
+            <img src="sin30.gif" alt="">
+            <p>In this example, \( \sin(30^{\circ}) \) is the ratio between the distance your friend skipped and the distance your friend traveled.</p>
+            <p>$$\sin(30^{\circ}) = \frac{\text{skipped distance}}{\text{friend's distance}}$$</p>
+            <p>For ease, let's call:</p>
+            <ul>
+                <li>the distance you traveled, adjacent (adj), since it is adjacent to the angle</li>
+                <li>the distance skipped, opposite (opp), since it is opposite to the angle</li>
+                <li>the distance your friend traveled, hypotenuse (hyp), for Greek reasons </li>
+            </ul>
+            <img src="sin30.png" alt="">
+            <br>
+            <p>So now we are left with $$\sin(30^{\circ}) = \frac{\text{opp}}{\text{hyp}}$$ for that particular triangle.</p>
+            <p>If you went out and measured this ratio yourself, you'd find that this ratio is always \( 0.5 \).</p>
+
+            <h4>Cosine</h4>
+            <p>\( \text{cosine} \) (often abbreviated as \( \cos \)) also takes an angle as an input. It is very similar to \( \sin \) and going back to the road example, \( \cos(30^{\circ}) \) is the ratio between the distance you traveled and the distance your friend traveled. $$\cos(30^{\circ}) = \frac{\text{your distance}}{\text{friend's distance}}$$</p>
+            <p>Going back to the adj, opp, and hyp labels from earlier, $$\cos(30^{\circ}) = \frac{\text{adj}}{\text{hyp}}$$</p>
+            <p>Again, measuring this ratio yourself would result in about \( 0.866 \).</p>
+            <h4>Trig Summary</h4>
+            <p>This process can be done for any angle you want! There are more mathematical ways to express what \( \text{sine} \) and \( \text{cosine} \) exactly are, but they aren't relevant to this.</p>
+            <p>What follows is a table showing some of the angles from 0 to 90 degrees</p>
+            <table class="function">
+                <tr>
+                    <th>\( \theta \)</th>
+                    <th>\(\sin(\theta)\)</th>
+                    <th>\(\cos(\theta)\)</th>
+                </tr>
+                <tr>
+                    <td>\(0^{\circ}\)</td>
+                    <td>\(0\)</td>
+                    <td>\(1\)</td>
+                </tr>
+                <tr>
+                    <td>\(15^{\circ}\)</td>
+                    <td>\(0.259\)</td>
+                    <td>\(0.966\)</td>
+                </tr>
+                <tr>
+                    <td>\(30^{\circ}\)</td>
+                    <td>\(0.500\)</td>
+                    <td>\(0.866\)</td>
+                </tr>
+                <tr>
+                    <td>\(45^{\circ}\)</td>
+                    <td>\(0.707\)</td>
+                    <td>\(0.707\)</td>
+                </tr>
+                <tr>
+                    <td>\(60^{\circ}\)</td>
+                    <td>\(0.866\)</td>
+                    <td>\(0.500\)</td>
+                </tr>
+                <tr>
+                    <td>\(75^{\circ}\)</td>
+                    <td>\(0.966\)</td>
+                    <td>\(0.256\)</td>
+                </tr>
+                <tr>
+                    <td>\(90^{\circ}\)</td>
+                    <td>\(1\)</td>
+                    <td>\(0\)</td>
+                </tr>
+            </table>
+            
+
+        </main>
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
