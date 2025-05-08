@@ -1,0 +1,14 @@
+div.fruit-math img {
+    display: inline;
+    width: 4em;
+}
+
+div.fruit-math span {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.MJX-TEX {
+    font-size: 1.25em;
+}
