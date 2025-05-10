@@ -86,7 +86,7 @@ main {
     overflow: hidden;
 }
 
-#profile img {
+#icon img {
     animation: float 7s ease infinite;
     transform: translateY(4px);
     position: relative;

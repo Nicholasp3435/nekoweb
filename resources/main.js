@@ -6,6 +6,9 @@ function add_icons() {
 
     anchors.forEach(anchor => {
         anchor.innerHTML = `${anchor.textContent}<img class="favicon" src="https://icons.duckduckgo.com/ip3/${anchor.host}.ico" aria-hidden="true" alt="">`;
+        if (anchor.host === 'x.com') {
+            anchor.innerHTML = `${anchor.textContent}<img class="favicon" src="/resources/imgs/twitter.png" aria-hidden="true" alt="">`;
+        }
     });
 }
 
