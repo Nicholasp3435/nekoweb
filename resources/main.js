@@ -52,23 +52,20 @@ function generate_side() {
     <h3>site navigation</h3>
     <nav>
         <ul>
-            <li><a href="/">home</a>
+            <li><a href="/">home</a></li>
+            <li><a href="/coding_projects/">coding projects</a>
                 <ul>
-                    <li><a href="/coding_projects/">coding projects</a>
-                        <ul>
-                            <li><a href="/coding_projects/3d_rendering/">3D rendering</a></li>
-                        </ul>
-                    </li>
-                    <li>photo gallery
-                        <ul>
-                            <li><a href="/photo_gallery/earth/">earth</a></li>
-                            <li><a href="/photo_gallery/space/">space</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/todo/">todo</a></li>
-                    <li><a href="/credits/">credits</a></li>
+                    <li><a href="/coding_projects/3d_rendering/">3D rendering</a></li>
                 </ul>
             </li>
+            <li>photo gallery
+                <ul>
+                    <li><a href="/photo_gallery/earth/">earth</a></li>
+                    <li><a href="/photo_gallery/space/">space</a></li>
+                </ul>
+            </li>
+            <li><a href="/todo/">todo</a></li>
+            <li><a href="/credits/">credits</a></li>
         </ul>
     </nav>
     <hr>
