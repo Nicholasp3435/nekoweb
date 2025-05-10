@@ -31,7 +31,7 @@
             <noscript>
                 <a href="/sitemap">sitemap</a>
             </noscript>
-
+            <a href="..">Back to rendering</a>
             <h2 class="ascii fancy rainbow">Some Math</h2>
             <p>There is some not <em>too</em> complicated math involved with 3D rendering. If you already know trigonometry and matrix multiplication, feel free to skip this section; if you don't, they aren't hard concepts! I'll build this on concepts from high school algebra.</p>
             <p>Click on the following links to learn more about trigonometry and linear algebra</p>
@@ -39,7 +39,20 @@
                 <li><a href="trig/">Trigonometry</a></li>
                 <li><a href="linear_alg/">Linear Algebra</a></li>
             </ul>
-
+            <p>If you do know the linear algebra for transforming vectors, it is really straight forward how 3D rendering is.</p>
+            <p>My code uses the .OBJ file format; it stores a list of vertices and faces. A face is made of three vertices. By simply converting each vertex to a vector, we can transform the vectors of each face, and connect them together!</p>
+            <p>A simplified version of my code can be described as:</p>
+            <ol>
+                <li>Parse the .OBJ file by storing all the vertex and face information</li>
+                <li>Convert the vertex information to a vector</li>
+                <li>For each face, there are three vectors, 
+                    <ul>
+                        <li>For each vector in the face, transform it using a transformation matrix such as a rotation matrix</li>
+                        <li>Fancy rendering can do some more linear algebra to work out lighting and shading, but for a wireframe, just connect the transformed vectors in a triangle to draw the face</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>I don't want to <u>over</u>explain 3D rendering, but it also feels like I'm not explaining enough. I'm running this through some friends to check if I adequately explained it well enough at the moment.</p>
             
         </main>
     </div>
