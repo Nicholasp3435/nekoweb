@@ -14,5 +14,18 @@
 			<guid>post-1</guid>
 			<pubDate>Sun, 23 Mar 2025, 20:00:00 -0500</pubDate>
 		</item>
+
+
+		<item>
+			<title>Live Bird Feeder!</title>
+			<description>
+                I made a bird feeder camera! Took a little bit of effort, but with a Raspberry Pi, a webcam,
+				some weatherproof boxes, and some 100% safe wiring (trust me bro), I got a live stream going of
+				my birdfeeder!
+            </description>
+			<link>https://nichao.nekoweb.org/feeder_cam/</link>
+			<guid>post-1</guid>
+			<pubDate>Sun, 11 May 2025, 20:00:00 -0500</pubDate>
+		</item>
 	</channel>
 </rss>
