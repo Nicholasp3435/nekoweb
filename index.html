@@ -79,21 +79,16 @@
                         
                         <script>
                             const alt_domain = (window.location.hostname === "nichao.neocities.org") ? "nekoweb" : "neocities";
-                            document.write(`I'm also on <a href="https://nichao.${alt_domain}.org">${alt_domain}</a> if that's your jam.`);
+                            document.write(`i'm also on <a href="https://nichao.${alt_domain}.org">${alt_domain}</a> if that's your jam.`);
                         </script>
                     </p>
                 </div>
-
-
             </div>
 
             <h2 class="ascii fancy rainbow">my friends <span aria-hidden="true">&lt;3</span></h2>
             <p>One of my best friends, cocoa, has this fun site! <a class="include-icon" href="https://cocoamilka.art" target="_blank" rel="noopener noreferrer">cocoamilka.art</a></p>
             <p>my boyfriend (🏳️‍🌈) also has a site that he promises he'll update someday&trade; <a class="include-icon" href="https://bezjhan.neocities.org/" target="_blank" rel="noopener noreferrer">bezjhan.neocities.org</a></p>
             <br>
-            <script>
-                document.write(`<button id="guestbook-btn" onclick="const book = document.querySelector('#guestbook'); book.classList.toggle('hidden'); document.querySelector('#guestbook-btn').classList.toggle('close'); ; book.scrollIntoView();">Guestbook</button>`);
-            </script>
             
     
             <aside>
@@ -156,6 +151,12 @@
 
 
         <section id="guestbook" class="hidden yes-script">
+            <button class="yes-script"
+                onclick="
+                    document.querySelector('#guestbook').classList.toggle('hidden');
+                    this.classList.toggle('close');
+                "
+            >Guestbook</button>
             <iframe src="https://nichao.atabook.org/" title="Atabook Guestbook"></iframe>
         </section>
 
@@ -168,7 +169,5 @@
 
     </div>
     
-    <footer>
-    </footer>
 </body>
 </html> 

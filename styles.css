@@ -1,7 +1,7 @@
 div.button-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.25em;
+    gap: 0.25rem;
     justify-content: center;
 }
 
@@ -10,55 +10,55 @@ div.button-container img {
     width: 88px;
 }
 
-
-iframe {
-    height: 70em;
-    border: none;
-    margin: 0.5em;
-    width:100%;
-}
-
 .ascii-flag {
-    margin: 1em;
+    margin: 1rem;
 }
 
 main {
     position: relative;
-    min-width: 40em;
-}
-
-#guestbook-btn {
-    background-color: #202;
-    position: absolute;
-    right: 0;
-    top: 10em;
-    font-size: 1.1em;
-    border: double #fff 0.5rem;
-    border-right: 0;
-    writing-mode: vertical-rl;
-    padding: 0.5em;
-    box-shadow: var(--std-shadow), inset var(--std-shadow);
-}
-
-#guestbook-btn::after {
-    content: " ◄";
-}
-
-#guestbook-btn.close::after {
-    content: " ►";
 }
 
 #guestbook {
-    flex: 40;
-    min-width: 21em;
-} 
-
-#guestbook.hidden {
-    display: none;
+    background-color: #101;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    z-index: 1;
 }
 
-#guestbook h2 {
-    text-align: center;
+#guestbook iframe { 
+    height: 70rem;
+    border: none;
+    width: 30vw;
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: 1s;
+}
+
+#guestbook.hidden iframe {
+    visibility: hidden;
+    width: 0;
+    transform: scaleX(0);
+}
+
+#guestbook button {
+    background-color: #202;
+    position: absolute;
+    font-size: 1.1rem;
+    border: double #fff 0.5rem;
+    border-right: 0;
+    writing-mode: vertical-rl;
+    padding: 0.5rem;
+    box-shadow: var(--std-shadow), inset var(--std-shadow);
+    left: -3em;
+}
+
+#guestbook button::after {
+    content: " ◄";
+}
+
+#guestbook button.close::after {
+    content: " ►";
 }
 
 #intro {
@@ -91,7 +91,7 @@ main {
     transform: translateY(4px);
     position: relative;
     width: 100%;
-    filter: drop-shadow(0 0 2em hsla(273, 86%, 40%, 50%));
+    filter: drop-shadow(0 0 2rem hsla(273, 86%, 40%, 50%));
 }
 
 @keyframes float {
@@ -107,6 +107,9 @@ main {
 @media only screen and (max-width: 600px) {
     #intro {
         flex-direction: column;
+    }
+    #guestbook iframe {
+        width: 75vw;
     }
 }
 
