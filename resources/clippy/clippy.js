@@ -2,11 +2,11 @@ console.log('Loaded', document.currentScript.src);
 
 
 var talks = [
-    'How can i help you?',
-    'Nice day!',
-    'Glad to meet you.',
-    'At your service',
-    'Helloo'
+    'How can I help you?',
+    "It's a nice day <3",
+    'Glad to meet you :3',
+    'At your service ~',
+    'Meowdy :3'
 ]
 
 clippy.load('Clippy', function(agent) {
@@ -15,6 +15,8 @@ clippy.load('Clippy', function(agent) {
     agent.element.setAttribute('aria-hidden', 'true');
 
     agent.show();
+    agent.moveTo(window.innerWidth - 150, window.innerHeight - 150);
+
     const talk = () => {
         agent.speak(talks[Math.floor(Math.random() * talks.length)]);
         agent.animate();
@@ -35,4 +37,18 @@ clippy.load('Clippy', function(agent) {
         agent.play('Congratulate');
         agent.speak("We're back on-line!");
     });
+
+    document.querySelector("#guestbook button").addEventListener('click', (e) => {
+        agent.stop();
+        if (e.target.classList.contains("close")) {
+            agent.moveTo(e.clientX - window.innerWidth * 0.3, e.clientY);
+            agent.play('GetAttention');
+            agent.speak(`Thanks for checking out my guestbook!\n\nDo you require any assistance?`);
+            agent.play('Writing');
+        } else {
+            agent.moveTo(window.innerWidth - 150, window.innerHeight - 150);
+        }
+    })
+
+
 });

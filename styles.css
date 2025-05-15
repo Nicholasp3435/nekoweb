@@ -1,3 +1,103 @@
+.clippy, .clippy-balloon {
+    filter: drop-shadow(0 0 0.25em);
+}
+
+.ascii-flag {
+    margin: 1rem;
+}
+
+#intro > h2 {
+    margin-bottom: 1rem;
+}
+
+#intro > div {
+    display: flex;   
+    gap: 1rem; 
+    margin-bottom: 1rem;
+}
+
+#intro > div > * {
+    background-color: var(--std-foreground);
+    box-shadow: var(--std-shadow);
+}
+
+#about {
+    flex: 4;
+    border: solid #fff 2px;
+}
+
+#profile {
+    margin: 0;
+    display: flex;
+    justify-items:end;
+    flex: 1;
+    flex-direction: column;
+    background-image: url("/resources/imgs/stars.gif");
+    image-rendering: optimizeQuality;
+}
+
+
+#icon {
+    border: solid #fff 2px;
+    border-bottom: none;
+    overflow: hidden;
+}
+
+#icon > img {
+    z-index: 1;
+    animation: float 5s ease infinite;
+    transform: translateY(-1rem);
+    position: relative;
+    width: 100%;
+    filter: drop-shadow(0 0 2rem hsla(273, 86%, 40%, 50%));
+}
+
+@keyframes float {
+    0% {
+        filter: drop-shadow(0 0 2rem hsla(273, 86%, 40%, 50%));
+    }
+    25% {
+        filter: drop-shadow(0 0 4rem hsla(273, 86%, 40%, 90%));
+    }
+    50% {
+        transform: translateY(2rem);
+        filter: drop-shadow(0 0 2rem hsla(273, 86%, 40%, 50%));
+    }
+    75% {
+        filter: drop-shadow(0 0 4rem hsla(273, 86%, 40%, 90%));
+    }
+}
+
+#profile figcaption {
+    border: solid #fff 2px;
+    background-color: var(--std-foreground);
+    flex: 1;
+}
+
+#idfk {
+    display: flex;
+    gap: 1rem;
+}
+
+#idfk > div {
+    border: solid #fff 2px;
+    padding: 1rem;
+    background-color: var(--std-foreground);
+    box-shadow: var(--std-shadow);
+}
+
+#idfk h4 {
+    text-align: center;
+}
+
+#friends {
+    flex: 3;
+}
+
+#buttons {
+    flex: 1;
+}
+
 div.button-container {
     display: flex;
     flex-wrap: wrap;
@@ -10,20 +110,16 @@ div.button-container img {
     width: 88px;
 }
 
-.ascii-flag {
-    margin: 1rem;
-}
-
-main {
-    position: relative;
-}
-
 #guestbook {
-    background-color: #101;
+    background-color: var(--std-background);
     position: absolute;
     padding: 0;
     right: 0;
     z-index: 1;
+    top: 15rem;
+    box-sizing: border-box;
+    border: double white 0.5em;
+    box-shadow: var(--std-shadow), inset var(--std-shadow);
 }
 
 #guestbook iframe { 
@@ -42,7 +138,7 @@ main {
 }
 
 #guestbook button {
-    background-color: #202;
+    background-color: var(--std-button-inactive);
     position: absolute;
     font-size: 1.1rem;
     border: double #fff 0.5rem;
@@ -61,55 +157,25 @@ main {
     content: " ►";
 }
 
-#intro {
-    display: flex;
-    align-items: center;
-}
-
-#intro > div {
-    flex: 5;
-}
-
-#profile {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    background-image: url("/resources/imgs/stars.gif");
-    float: left;
-    margin: 16px;
-    box-shadow: var(--std-shadow);
-    image-rendering: optimizeQuality;
-}
-
-#profile div {
-    border: solid #fff 4px;
-    overflow: hidden;
-}
-
-#icon img {
-    animation: float 7s ease infinite;
-    transform: translateY(4px);
-    position: relative;
-    width: 100%;
-    filter: drop-shadow(0 0 2rem hsla(273, 86%, 40%, 50%));
-}
-
-@keyframes float {
-    50% {transform: translateY(10px);}
-}
-
-#profile figcaption {
-    border: solid #fff 2px;
-    background-color: #212;
-}
-
-
 @media only screen and (max-width: 600px) {
-    #intro {
-        flex-direction: column;
-    }
     #guestbook iframe {
         width: 75vw;
     }
+}
+
+@media only screen and (max-width: 1024px) {
+    #intro > div {
+        flex-direction: column;
+    }
+    #idfk {
+        flex-direction: column;
+    }
+    header pre {
+        visibility: collapse;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+
 }
 

@@ -7,20 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nic's epic website :3</title>
 
-    <link rel="me" href="https://woof.tech/@nichao">
+    <link rel="stylesheet" type="text/css" href="/resources/default_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="/resources/noscript.css">
+    </noscript>
 
     <!-- for Clippy -->
     <link rel="stylesheet" type="text/css" href="/resources/clippy/clippy.css">
     <script defer src="/resources/clippy/clippy.min.js"></script>
     <script defer src="/resources/clippy/clippy.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="/resources/default_styles.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-
-    <noscript>
-        <link rel="stylesheet" type="text/css" href="/resources/noscript.css">
-    </noscript>
-    
     <script defer src="/resources/main.js"></script>
 </head>
 
@@ -47,127 +44,158 @@
     </header>
 
     <div id="content">
-        <main id='main'>
+        <main>
+
             <noscript>
-                <a href="/sitemap/">sitemap</a>
+                <a href="/sitemap">sitemap</a>
             </noscript>
-            
-            <h2 class="ascii fancy rainbow">who am i?</h2>
-            
-            <div id="intro">
-                <figure id="profile">
-                    <div id="icon">
-                        <img alt="" src="/resources/imgs/nic.png">
-                    </div>
-                    <figcaption>
-                        <ul>
-                            <li>nichꜵ</li>
-                            <li>they/them</li>
-                            <li>cat + otter</li>
-                            <li>Art by <a class="include-icon" href="https://x.com/S3Beep" target="_blank" rel="noopener noreferrer">Hiss</a></li>
-                        </ul>
-                    </figcaption>
-                </figure>
+
+            <section id="intro">
+                <h2 class="ascii fancy rainbow">meowdy there!</h2>
 
                 <div>
-                    <p>hi, I'm nichꜵ (or nichao or nic) and I love making silly websites like this one&nbsp;<span aria-hidden="true">:3</span></p>
-                    <br>
-                    <p>one of my cool sites is this <a class="include-icon" href="https://cat-boop.com" target="_blank" rel="noopener noreferrer">fun</a> website where you can boop a kitty!</p>
-                    <p>i have other sites too but I'm in the process of bringing the content to this one!</p>
-                    <br>
+                    <figure id="profile">
+                        <div id="icon">
+                            <img alt="" src="/resources/imgs/nic.png" onmouseover="this.src='/resources/imgs/nic_hover.png';" onmouseout="this.src='/resources/imgs/nic.png';">
+                            <small>art by <a class="include-icon" href="https://twitter.com/S3Beep" target="_blank" rel="noopener noreferrer">Hiss</a></small>
+                        </div>
+                        <figcaption>
+                            <ul>
+                                <li>nichꜵ</li>
+                                <li>they/them</li>
+                                <li id="age">21 years old</li>
+                                <script>
+                                    document.querySelector("#age").textContent = (Math.floor(((new Date() - new Date(1053367200000)) / 31556952000) * 10e2) / 10e2).toFixed(3) + " years old";
+                                </script>
+                                <li>cat + otter</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+
+                    <div id="about">
+                        <p>
+                            hi, i'm nichꜵ (or nichao or nic) and welcome to my site! <span aria-hidden="true">:3</span>
+                        </p>
+                        <p>
+                            i love making silly sites to share the things that i do! one of my first sites is a fun one where
+                            you <a class="include-icon" href="https://cat-boop.com" target="_blank" rel="noopener noreferrer">boop a kitty</a>!
+                            i have other sites, and i am in the process of bringing the content to this one!
+                        </p>
+                        <p>
+                            this site will focus on <em>personal</em> things that i'm interested in. i understand that things
+                            are going to be boring to some viewers. i am a Computer Science major with an emphasis in Theoretical
+                            Computer Science and then a minor in Mathematics; of course my interests aren't interesting to everyone.
+                        </p>
+                        <p>
+                            with that being said, i have many other interests outside of computer science and math! i am a very
+                            bad photographer, for one! i have a couple cameras, i even made one from scratch!
+                        </p>
+                        <p>
+                            perhaps there'll be something that catches your interest on my site <span aria-hidden="true">&lt;3</span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="idfk">
+                <div id="friends">
+                    <h3 class="fancy wavy-t">my friends</h3>
                     <p>
-                        
-                        <script>
-                            const alt_domain = (window.location.hostname === "nichao.neocities.org") ? "nekoweb" : "neocities";
-                            document.write(`i'm also on <a href="https://nichao.${alt_domain}.org">${alt_domain}</a> if that's your jam.`);
-                        </script>
+                        one of my best friends, cocoa, is on <a class="include-icon" href="https://cocoamilka.art" target="_blank" rel="noopener noreferrer">cocoamilka.art</a>,
+                        where she shares some cool pictures with her <span class="fancy rainbow">polaroid</span> cameras! 
+                        she also does very amazing 3D avatars!! we met a while ago now, but we both bonded over silly computer
+                        science things <span aria-hidden="true">&lt;3</span>
+                    </p>
+                    <p>
+                        my boyfriend (🏳️‍🌈) has <a class="include-icon" href="https://bezjhan.neocities.org/" target="_blank" rel="noopener noreferrer">this site</a>
+                        that he promises he'll update someday&trade;. he plans to maybe talk about anthropology on it! we've
+                        been together since 2019 and he means the world to me <span aria-hidden="true">&lt;3</span><br>
+                        <small>i'm surprised he's been able to put up with me for so long lol</small>
                     </p>
                 </div>
-            </div>
+                <div id="buttons">
+                    <h3 class="fancy wavy-t">buttons</h3>
+                    <h4>buttons that i've made!</h4>
+                    <div class="button-container">
+                        <img src="/resources/imgs/buttons/personal/bi.gif" alt="A gif with a bisexual flag gradient with the text 'i really like these colors'.">
+                        <img src="/resources/imgs/buttons/personal/fluid.gif" alt="A gif with a genderfluid flag gradient with the text 'i really like these colors'.">
+                        <img src="/resources/imgs/buttons/personal/linear.gif" alt="A gif of a 3D model of a yoshi with the text 'Powered by linear algebra'.">
+                        <a href="https://cat-boop.com" target="_blank" rel="noopener noreferrer">
+                            <img src="/resources/imgs/buttons/personal/cat-boop.gif" alt="Checkout cat-boop.com.">
+                        </a>
+                        <a class="button-link" href="money/" target="_blank" rel="noopener noreferrer" >
+                            <img class="button" src="/resources/imgs/buttons/personal/money.gif" alt="Do you want free money?.">
+                        </a>
+                    </div>
+    
+                    <h4>buttons to other sites!</h4>
+                    <div class="button-container">
+                        <a href="https://equisett.nekoweb.org" target="_blank" rel="noopener noreferrer">
+                            <img src="/resources/imgs/buttons/sites/button-equisett.png" alt="Checkout equisett.nekoweb.org">
+                        </a>
+                        <a href="https://compactbunker.nekoweb.org" target="_blank" rel="noopener noreferrer">
+                            <img src="/resources/imgs/buttons/sites/compactbunker.gif" alt="Checkout compactbunker.nekoweb.org">
+                        </a>
+                        <a href="https://nekomari.nekoweb.org" target="_blank" rel="noopener noreferrer">
+                            <img src="https://nekomari.nekoweb.org/assets/button-nekomari.gif" alt="Checkout nekomari.nekoweb.org">
+                        </a>
+                        <a href="https://lerariemann.nekoweb.org/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://lerariemann.nekoweb.org/banner.gif" alt="Checkout lerariemann.nekoweb.org">
+                        </a>
+                    </div>
 
-            <h2 class="ascii fancy rainbow">my friends <span aria-hidden="true">&lt;3</span></h2>
-            <p>One of my best friends, cocoa, has this fun site! <a class="include-icon" href="https://cocoamilka.art" target="_blank" rel="noopener noreferrer">cocoamilka.art</a></p>
-            <p>my boyfriend (🏳️‍🌈) also has a site that he promises he'll update someday&trade; <a class="include-icon" href="https://bezjhan.neocities.org/" target="_blank" rel="noopener noreferrer">bezjhan.neocities.org</a></p>
-            <br>
-            
-    
-            <aside>
-                <hr>
-                <h3>my buttons!</h3>
-                <div class="button-container">
-                    <img src="/resources/imgs/buttons/personal/bi.gif" alt="A gif with a bisexual flag gradient with the text 'i really like these colors'.">
-                    <img src="/resources/imgs/buttons/personal/fluid.gif" alt="A gif with a genderfluid flag gradient with the text 'i really like these colors'.">
-                    <img src="/resources/imgs/buttons/personal/linear.gif" alt="A gif of a 3D model of a yoshi with the text 'Powered by linear algebra'.">
-                    <a href="https://cat-boop.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/resources/imgs/buttons/personal/cat-boop.gif" alt="Checkout cat-boop.com.">
-                    </a>
-                    <a class="button-link" href="money/" target="_blank" rel="noopener noreferrer" >
-                        <img class="button" src="/resources/imgs/buttons/personal/money.gif" alt="Do you want free money?.">
-                    </a>
-                </div>
-    
-                <h3>other cool sites!</h3>
-                <div class="button-container">
+                    <h4>other buttons!</h4>
+                    <div class="button-container">
+                        <a class="button-link" href="https://youtu.be/FtutLA63Cp8" target="_blank" rel="noopener noreferrer">
+                            <img class="button"  src="/resources/imgs/buttons/others/badapple.gif" alt="A gif of the Bad Apple meme.">
+                        </a>
+                        <a class="button-link" href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer">
+                            <img class="button"  src="/resources/imgs/buttons/others/firefox2.gif" alt="The firefox logo with the text 'Firefox'.">
+                        </a>
+                        <a class="button-link" href="https://lynx.invisible-island.net/" target="_blank" rel="noopener noreferrer">
+                            <img class="button"  src="/resources/imgs/buttons/others/lynx.gif" alt="A lynx with the text 'Lynx' referring to the Lynx browser.">
+                        </a>
+                        <a class="button-link" href="https://linuxmint.com/" target="_blank" rel="noopener noreferrer">
+                            <img class="button"  src="/resources/imgs/buttons/others/gnu-linux.gif" alt="Linux mascot Tux, a penguin, with the text 'Made on GNU/Linux'.">
+                        </a>
+                        <a class="button-link" href="https://xenia-linux-site.glitch.me/" target="_blank" rel="noopener noreferrer">
+                            <img class="button"  src="/resources/imgs/buttons/others/xenia.gif" alt="Linux mascot Xenia, a fox, with the text 'Linux NOW!'.">
+                        </a>
+                        <img class="button"  src="/resources/imgs/buttons/others/paws.gif" alt="A paw with the text 'Made with MY OWN TWO PAWS'.">
+                        <a class="button-link" href="https://calendar.mst.edu/mcnutt_hall_463" target="_blank" rel="noopener noreferrer">
+                            <img class="button"  src="/resources/imgs/buttons/others/mcnutt.gif" alt="McNutt Hall from MST with the text 'i nutted in mcnutt'.">
+                        </a>
+                    </div>
                     
-                    <a href="https://equisett.nekoweb.org" target="_blank" rel="noopener noreferrer">
-                        <img src="/resources/imgs/buttons/sites/button-equisett.png" alt="Checkout equisett.nekoweb.org">
-                    </a>
-                    <a href="https://compactbunker.nekoweb.org" target="_blank" rel="noopener noreferrer">
-                        <img src="/resources/imgs/buttons/sites/compactbunker.gif" alt="Checkout compactbunker.nekoweb.org">
-                    </a>
-                    <a href="https://nekomari.nekoweb.org" target="_blank" rel="noopener noreferrer">
-                        <img src="https://nekomari.nekoweb.org/assets/button-nekomari.gif" alt="Checkout nekomari.nekoweb.org">
-                    </a>
-                    <a href="https://lerariemann.nekoweb.org/" target="_blank" rel="noopener noreferrer">
-                        <img src="https://lerariemann.nekoweb.org/banner.gif" alt="Checkout lerariemann.nekoweb.org">
-                    </a>
                 </div>
-    
-    
-                <h3>other buttons!</h3>
-                <div class="button-container">
-                    <a class="button-link" href="https://youtu.be/FtutLA63Cp8" target="_blank" rel="noopener noreferrer">
-                        <img class="button"  src="/resources/imgs/buttons/others/badapple.gif" alt="A gif of the Bad Apple meme.">
-                    </a>
-                    <a class="button-link" href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer">
-                        <img class="button"  src="/resources/imgs/buttons/others/firefox2.gif" alt="The firefox logo with the text 'Firefox'.">
-                    </a>
-                    <a class="button-link" href="https://lynx.invisible-island.net/" target="_blank" rel="noopener noreferrer">
-                        <img class="button"  src="/resources/imgs/buttons/others/lynx.gif" alt="A lynx with the text 'Lynx' referring to the Lynx browser.">
-                    </a>
-                    <a class="button-link" href="https://linuxmint.com/" target="_blank" rel="noopener noreferrer">
-                        <img class="button"  src="/resources/imgs/buttons/others/gnu-linux.gif" alt="Linux mascot Tux, a penguin, with the text 'Made on GNU/Linux'.">
-                    </a>
-                    <a class="button-link" href="https://xenia-linux-site.glitch.me/" target="_blank" rel="noopener noreferrer">
-                        <img class="button"  src="/resources/imgs/buttons/others/xenia.gif" alt="Linux mascot Xenia, a fox, with the text 'Linux NOW!'.">
-                    </a>
-                    <img class="button"  src="/resources/imgs/buttons/others/paws.gif" alt="A paw with the text 'Made with MY OWN TWO PAWS'.">
-                    <a class="button-link" href="https://calendar.mst.edu/mcnutt_hall_463" target="_blank" rel="noopener noreferrer">
-                        <img class="button"  src="/resources/imgs/buttons/others/mcnutt.gif" alt="McNutt Hall from MST with the text 'i nutted in mcnutt'.">
-                    </a>
-                </div>
-            </aside>    
-        </main>
-
-
-        <section id="guestbook" class="hidden yes-script">
-            <button class="yes-script"
-                onclick="
-                    document.querySelector('#guestbook').classList.toggle('hidden');
-                    this.classList.toggle('close');
-                "
-            >Guestbook</button>
-            <iframe src="https://nichao.atabook.org/" title="Atabook Guestbook"></iframe>
-        </section>
-
-
-        <noscript>
-            <section>
-                <iframe tabindex="0" src="https://nichao.atabook.org/" title="Atabook Guestbook"></iframe>
+                
             </section>
-        </noscript> 
 
+            <section id="guestbook" class="hidden yes-script">
+                <button class="yes-script"
+                    onclick="
+                        document.querySelector('#guestbook').classList.toggle('hidden');
+                        this.classList.toggle('close');
+                    "
+                >Guestbook</button>
+                <iframe src="https://nichao.atabook.org/" title="Atabook Guestbook" onload="scroll(0,0);"></iframe>
+            </section>
+
+
+            <noscript>
+                <section>
+                    <iframe tabindex="0" src="https://nichao.atabook.org/" title="Atabook Guestbook" onload="scroll(0,0);"></iframe>
+                </section>
+            </noscript> 
+
+
+        </main>
     </div>
-    
+
+    <footer>
+    </footer>
+
 </body>
-</html> 
+</html>
