@@ -70,6 +70,10 @@
     --flicker-speed: 0.15s;
     --flicker-content: '';
     --std-shadow: 0 0 .5em;
+    --std-background: #101;
+    --std-foreground: #212;
+    --std-button-inactive: #202;
+    --std-button-active: #606;
 }
 
 body {
@@ -78,7 +82,7 @@ body {
     font-family: 'BIOS', 'Courier New', Courier, monospace;
     color: white;
     text-shadow: var(--std-shadow);
-    background-color: #101;
+    background-color: var(--std-background);
 }
 
 header {
@@ -159,7 +163,8 @@ hr {
 }
 
 p {
-    margin: 1em;
+    margin: 1.5rem;
+    line-height: 1.75rem;
 }
 
 img {
@@ -168,6 +173,7 @@ img {
 
 a {
     padding: 1px;
+    transition: color .25s;
 }
 
 a:any-link {
@@ -262,7 +268,7 @@ img.favicon {
 }
 
 #toggle-crt {
-    background-color: #212;
+    background-color: var(--std-button-inactive);
     font-size: 1em;
     padding: .25em;
     margin: 1em;
@@ -295,11 +301,7 @@ img.favicon {
     35% { opacity: 0.23604; }
 }
   
-/* bring clippy down here for crt effect */
-.clippy, .clippy-balloon {
-    z-index: 0;
-    filter: drop-shadow(0 0 0.25em);
-}
+
 
 /* end crt effects */
 
