@@ -185,7 +185,7 @@ a:hover, a:focus {
 }
 
 a:focus {
-    border: dashed 1px #cd1;
+    outline: dashed 1px #cd1;
 }
 
 a.current {
